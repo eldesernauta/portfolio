@@ -6,15 +6,23 @@
   display: flex;
   flex-wrap: wrap;
 
+  .height{
+    min-height: 90vh !important;
+  }
+
   .column {
     width: 50%;
     height: 50vh;
     border-radius: 20px;
 
+
     &:nth-child(1) {
+      position: relative;
       color: white;
       border-bottom: 5px solid $primary;
       border-right: 5px solid $primary;
+
+      
 
       &:hover {
         background-color: $primary;
@@ -42,7 +50,9 @@
     }
 
     &:nth-child(4) {
-      position: relative;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       color: white;
       border-bottom: 5px solid $success;
       border-right: 5px solid $success;
@@ -102,12 +112,35 @@
       align-items: center;
       transition: 1s ease-in-out !important;
 
+      .unfold-column {
+        border-radius: 10px;
+        background-color: $primary;
+        color: $light;
+        font-family: "KGSecondChances";
+        font-weight: 600;
+        width: 35px;
+        height: 35px;
+        border: 0;
+        position: absolute;
+        bottom: 10px;
+        opacity: 0;
+
+        &:hover{
+          cursor: pointer;
+          background-color: $success;
+        }
+      }
+
       h1 {
-        font-size: 80px;
+        font-size: 32px;
       }
 
       &:hover {
         transition: 1s ease-in-out !important;
+
+        .unfold-column{
+          opacity: 1;
+        }
       }
     }
   }
