@@ -1,7 +1,7 @@
 import "../styles/main.scss";
 
 const changeSize = () => {
-  
+  const column = document.getElementById('column1').style
 }
 
 const Main = () => {
