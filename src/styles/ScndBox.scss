@@ -3,6 +3,9 @@
 
 .Box2 {
   border-color: $secondary !important;
+  position: absolute !important;
+  top: 0;
+  right: 0;
 
   &:hover {
     background-color: $secondary;

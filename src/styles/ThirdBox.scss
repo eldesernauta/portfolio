@@ -3,6 +3,9 @@
 
 .Box3 {
   border-color: $info !important;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
 
   &:hover {
     background-color: $info;

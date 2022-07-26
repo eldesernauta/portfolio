@@ -3,6 +3,9 @@
 
 .Box4 {
   border: 0 !important;
+  position: absolute !important;
+  bottom: 0;
+  right: 0;
   .content {
     display: grid !important;
     grid-template-columns: 50% 50% !important;
