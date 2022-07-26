@@ -1,0 +1,10 @@
+@import "../app.scss";
+@import "./main.scss";
+
+.Box3 {
+  border-color: $info !important;
+
+  &:hover {
+    background-color: $info;
+  }
+}
