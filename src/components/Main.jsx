@@ -1,10 +1,12 @@
 import { useState } from "react";
 import "../styles/main.scss";
 import pic from "../assets/portrait.png";
-
+import ReactTooltip from "react-tooltip";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 const Main = () => {
+  const [tooltip, showTooltip] = useState(true);
+
   const [isFold1, setFold1] = useState("false");
   const [isFold2, setFold2] = useState("false");
   const [isFold3, setFold3] = useState("false");
@@ -96,22 +98,12 @@ const Main = () => {
             <h1>Oscar Rojas</h1>
             <p className="subtitle">Web Developer / Photographer</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Colombian-born publicist focused on development. Big sense of
+              responsability, leadership oriented and really good
+              comunicative-argumentative skills that highlights my written and
+              oral work and allows me to have a great teamwork. My artish
+              background riched me out with a huge aesthetic perception that
+              helps me to create good looking layouts in detail.
             </p>
             <img src={pic} className="portrait" alt="Portrait" />
             <button
@@ -273,8 +265,54 @@ const Main = () => {
 
         <div className={isFold3 ? "Box3" : "Box3 Box3-fold"}>
           <div className="content">
-            <h2>Experiencia</h2>
-
+            <h2>Experience</h2>
+            <div className="experience">
+              <div className="exp">
+                <h3>WEB DEVELOPER</h3>
+                <p>
+                  Developing and integrating user interfaces using programming
+                  languages and new frontend technologies as HTML + CSS,
+                  Javascript, ReacJS, Sass, Webpack, AWS, Git and others.
+                  <br />
+                  (Bilingual) - (Austin, Texas - USA)
+                </p>
+                <h6>
+                  Austin Software
+                  <br />
+                  Mar. 2022 - Present
+                </h6>
+              </div>
+              <div className="exp">
+                <h3>WEB DESIGNER / FRONTEND</h3>
+                <p>
+                  Design, programming / building and managing websites for
+                  company clients, edit plugins and create responsive layouts
+                  using Wordpress, HTML, CSS, JS, GIT and PHP.
+                  <br />
+                  (Bilingual) - (Medellin, Antioquia)
+                </p>
+                <h6>
+                  Solvo Global
+                  <br />
+                  Jul. 2020 - Mar. 2022
+                </h6>
+              </div>
+              <div className="exp">
+                <h3>WEB DESIGNER</h3>
+                <p>
+                  Design, build and manage websites for the company clients,
+                  edit plugins and create responsive layouts using Wordpress,
+                  HTML and CSS.
+                  <br />
+                  (Bello, Antioquia)
+                </p>
+                <h6>
+                  Script Digital
+                  <br />
+                  Feb. 2019 - Jun. 2020
+                </h6>
+              </div>
+            </div>
             <button
               type="button"
               id="btnBox3"
@@ -288,24 +326,137 @@ const Main = () => {
 
         <div className="Box4">
           <div className="content">
-            <div className="quarter-column">
+            <div
+              className="quarter-column"
+              data-tip="Project made on 2021 that includes my own photographies<br/> and development using ReactJs, Sass, Webpack and CI/CD."
+              data-background-color="#e96bd4"
+              data-text-color="#111"
+              data-place="top"
+              onMouseEnter={() => showTooltip(true)}
+              onMouseLeave={() => {
+                showTooltip(false);
+                setTimeout(() => showTooltip(true), 50);
+              }}
+            >
               <h2>Maremoto</h2>
+              <a
+                href="https://maremoto.eldesernauta.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Page
+              </a>
             </div>
 
-            <div className="quarter-column">
+            <div
+              className="quarter-column"
+              data-tip="Project made on 2022 that includes my own photographies,<br/> design and development using ReactJs, Sass, Webpack and CI/CD."
+              data-background-color="#ce70e8"
+              data-text-color="#111"
+              data-place="top"
+              onMouseEnter={() => showTooltip(true)}
+              onMouseLeave={() => {
+                showTooltip(false);
+                setTimeout(() => showTooltip(true), 50);
+              }}
+            >
               <h2>T.Fish</h2>
+              <a
+                href="https://tfish.eldesernauta.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Page
+              </a>
+            </div>
+
+            <div
+              className="quarter-column"
+              data-tip="Startup I'm currently working for as frontend developer <br/> using different technologies as ReactJS, AWS, Git, Webpack and others."
+              data-background-color="#a347e5"
+              data-text-color="#111"
+              data-place="top"
+              onMouseEnter={() => showTooltip(true)}
+              onMouseLeave={() => {
+                showTooltip(false);
+                setTimeout(() => showTooltip(true), 50);
+              }}
+            >
+              <h2>Spot Insurance</h2>
+              <a href="https://getspot.com/" target="_blank" rel="noreferrer">
+                View Page
+              </a>
             </div>
 
             <div className="quarter-column">
-              <h2>Portafolio</h2>
-            </div>
-
-            <div className="quarter-column">
-              <h2>Contacto</h2>
+              <h2>Contact</h2>
+              <div className="social">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/eldesernauta/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:hola@eldesernauta.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="far fa-envelope"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/eldesernauta"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fa fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/eldesernauta"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.behance.net/eldesernauta"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fa fa-behance"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p>
+                  {" "}
+                  2022 <span>©</span> eldesernauta
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {tooltip && (
+        <ReactTooltip
+          eventOff="mouseover"
+          delayHide={500}
+          place="top"
+          scrollHide
+          multiline
+          delayShow={100}
+        />
+      )}
     </>
   );
 };
