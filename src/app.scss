@@ -35,7 +35,10 @@ body,
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+*:focus-visible{
+  outline: none;
 
+}
 body {
   background-color: $dark;
 }
