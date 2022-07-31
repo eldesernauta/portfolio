@@ -16,12 +16,16 @@ const Main = () => {
 
     if (!BoxActive.classList.contains("Box1-fold")) {
       document.querySelector(".Box1").style.minHeight = "90vh";
+      document.querySelector(".Box1").style.maxHeight = "90vh";
       document.querySelector(".Box3").style.maxHeight = "10vh";
+      document.querySelector(".Box3").style.minHeight = "10vh";
       document.getElementById("btnBox2").style.display = "none";
       document.getElementById("btnBox3").style.display = "none";
     } else {
       document.querySelector(".Box1").style.minHeight = "50vh";
+      document.querySelector(".Box1").style.maxHeight = "50vh";
       document.querySelector(".Box3").style.maxHeight = "50vh";
+      document.querySelector(".Box3").style.minHeight = "50vh";
       document.getElementById("btnBox2").style.display = "block";
       document.getElementById("btnBox3").style.display = "block";
     }
@@ -58,14 +62,18 @@ const Main = () => {
 
     if (!BoxActive.classList.contains("Box3-fold")) {
       document.querySelector(".Box3").style.minHeight = "90vh";
+      document.querySelector(".Box3").style.maxHeight = "90vh";
       document.querySelector(".Box1").style.maxHeight = "10vh";
+      document.querySelector(".Box1").style.minHeight = "10vh";
       document.getElementById("btnBox1").style.display = "none";
       document.getElementById("btnBox2").style.display = "none";
       document.querySelector(".Box1").querySelector(".content").style.padding = "0";
 
     } else {
       document.querySelector(".Box3").style.minHeight = "50vh";
+      document.querySelector(".Box3").style.maxHeight = "50vh";
       document.querySelector(".Box1").style.maxHeight = "50vh";
+      document.querySelector(".Box1").style.minHeight = "50vh";
       document.getElementById("btnBox1").style.display = "block";
       document.getElementById("btnBox2").style.display = "block";
       document.querySelector(".Box1").querySelector(".content").style.padding = "2em";
