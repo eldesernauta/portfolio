@@ -90,10 +90,20 @@ const Main = () => {
       Box1.querySelector(".content").style.padding = "2em";
     }
   };
+
+
   return (
     <>
       <div className="row">
         <div className={isFold1 ? "Box1" : "Box1 Box1-fold"}>
+
+          <div className="animation-wrapper">
+            <div className="particle particle-1"></div>
+            <div className="particle particle-2"></div>
+            <div className="particle particle-3"></div>
+            <div className="particle particle-4"></div>
+          </div>
+
           <div className="content">
             <h1>Oscar Rojas</h1>
             <p className="subtitle">Web Developer / Photographer</p>
@@ -328,7 +338,7 @@ const Main = () => {
           <div className="content">
             <div
               className="quarter-column"
-              data-tip="Project made on 2021 that includes my own photographies<br/> and development using ReactJs, Sass, Webpack and CI/CD."
+              data-tip="Project made on 2021 that includes my own photographies and development using ReactJs, Sass, Webpack and CI/CD."
               data-background-color="#e96bd4"
               data-text-color="#111"
               data-place="top"
@@ -350,7 +360,7 @@ const Main = () => {
 
             <div
               className="quarter-column"
-              data-tip="Project made on 2022 that includes my own photographies,<br/> design and development using ReactJs, Sass, Webpack and CI/CD."
+              data-tip="Project made on 2022 that includes my own photographies, design and development using ReactJs, Sass, Webpack and CI/CD."
               data-background-color="#ce70e8"
               data-text-color="#111"
               data-place="top"
@@ -372,7 +382,7 @@ const Main = () => {
 
             <div
               className="quarter-column"
-              data-tip="Startup I'm currently working for as frontend developer <br/> using different technologies as ReactJS, AWS, Git, Webpack and others."
+              data-tip="Startup I'm currently working for as frontend developer using different technologies as ReactJS, AWS, Git, Webpack and others."
               data-background-color="#a347e5"
               data-text-color="#111"
               data-place="top"
@@ -454,6 +464,7 @@ const Main = () => {
           place="top"
           scrollHide
           multiline
+          resizeHide="true"
           delayShow={100}
         />
       )}
