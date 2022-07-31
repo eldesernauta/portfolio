@@ -1,0 +1,397 @@
+@import "../app.scss";
+
+.row {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid $light;
+
+  .Box1,
+  .Box2,
+  .Box3,
+  .Box4 {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    color: $light;
+    border-bottom: 5px solid;
+    border-right: 5px solid;
+    overflow: hidden;
+  }
+
+  .Box1 {
+    top: 0;
+    left: 0;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        text-align: center;
+        font-size: 58px;
+      }
+
+      h4 {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 300;
+      }
+
+      p {
+        opacity: 0;
+        margin-top: 1em;
+        display: none;
+        z-index: 1;
+      }
+
+      img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        z-index: 0;
+      }
+
+      button {
+        background-color: transparent;
+        position: absolute;
+        bottom: 2em;
+        left: calc(50% - 20px);
+        border-radius: 10px;
+        color: $light;
+        font-family: "KGSecondChances";
+        font-weight: 600;
+        width: 35px;
+        height: 35px;
+        border: 0;
+        opacity: 0;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $success;
+        }
+        &:active {
+          border: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $primary;
+
+        button {
+          opacity: 1;
+        }
+      }
+    }
+    &:hover {
+      border-color: $primary;
+    }
+  }
+
+  .Box1-fold {
+    min-height: 90vh;
+    z-index: 2;
+    background-color: $light;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+
+      h4 {
+        margin-left: 3px;
+      }
+
+      p {
+        opacity: 1;
+        display: block;
+      }
+      img {
+        opacity: 1;
+      }
+
+      button {
+        background-color: $primary;
+        opacity: 1;
+
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &:hover {
+      .content {
+        color: $light !important;
+      }
+    }
+  }
+
+  .Box2 {
+    top: 0;
+    right: 0;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+        position: absolute;
+        bottom: calc(50% - 20px);
+        left: 2em;
+        border-radius: 10px;
+        color: $light;
+        font-weight: 600;
+        width: 35px;
+        height: 35px;
+        border: 0;
+        opacity: 0;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $primary;
+        }
+        &:active {
+          border: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $secondary;
+
+        button {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $secondary;
+    }
+  }
+
+  .Box2-fold {
+    min-width: 90vw;
+    z-index: 2;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+
+      h4 {
+        margin-left: 3px;
+      }
+
+      p {
+        opacity: 1;
+        display: block;
+      }
+      img {
+        opacity: 1;
+      }
+
+      button {
+        background-color: $secondary;
+        opacity: 1;
+
+        i {
+          transform: rotate(180deg);
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: $primary;
+        }
+        &:active {
+          border: 0;
+        }
+      }
+    }
+    &:hover {
+      .content {
+        color: $light !important;
+
+      }
+    }
+  }
+
+  .Box3 {
+    bottom: 0;
+    left: 0;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        background-color: transparent;
+        position: absolute;
+        top: 2em;
+        left: calc(50% - 20px);
+        border-radius: 10px;
+        color: $light;
+        font-weight: 600;
+        width: 35px;
+        height: 35px;
+        border: 0;
+        opacity: 0;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $secondary;
+        }
+        &:active {
+          border: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $info;
+
+        button {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $info;
+    }
+  }
+  
+  .Box3-fold {
+    min-height: 90vh;
+    z-index: 2;
+
+    .content {
+      width: 100%;
+      height: 100%;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+
+      h4 {
+        margin-left: 3px;
+      }
+
+      p {
+        opacity: 1;
+        display: block;
+      }
+      img {
+        opacity: 1;
+      }
+
+      button {
+        background-color: $success;
+
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &:hover {
+      .content {
+        color: $light !important;
+      }
+    }
+  }
+
+  .Box4 {
+    border: 0;
+    bottom: 0;
+    right: 0;
+    .content {
+      display: grid !important;
+      grid-template-columns: 50% 50% !important;
+      align-items: stretch !important;
+
+      .quarter-column {
+        width: 25vw !important;
+        min-height: 25vh;
+        padding: 1em;
+
+        &:nth-child(1) {
+          box-shadow: $light -5px -5px inset;
+          transition: 0.3s ease-in-out;
+          background-size: cover;
+          border-right: 5px solid $light;
+          border-bottom: 5px solid $light;
+          background-position: center center;
+          box-shadow: $dark -500px -500px inset;
+          background-image: url(../assets/maremoto-cover.jpg);
+        
+
+          &:hover {
+            box-shadow: $success 0px 0px inset;
+            transition: 0.3s ease-in-out;
+            }
+        }
+
+        &:nth-child(2) {
+          box-shadow: $light -5px -5px inset;
+          transition: 0.3s ease-in-out;
+          background-size: cover;
+          border-right: 5px solid $light;
+          border-bottom: 5px solid $light;
+          background-position: center center;
+          box-shadow: $dark -500px -500px inset;
+          background-image: url(../assets/tfish-cover.jpg);
+        
+
+          &:hover {
+            box-shadow: $info 0px 0px inset;
+            transition: 0.3s ease-in-out;
+            }
+        }
+
+        &:nth-child(3) {
+          box-shadow: $light -5px -5px inset;
+
+          &:hover {
+            box-shadow: $secondary -5px -5px inset;
+            background-color: $secondary;
+          }
+        }
+
+        &:nth-child(4) {
+          box-shadow: $light -5px -5px inset;
+
+          &:hover {
+            box-shadow: $primary -5px -5px inset;
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+
