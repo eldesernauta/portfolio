@@ -168,7 +168,7 @@ const Main = () => {
                 <div className="grid-skill">
                   <ProgressBar
                     completed={95}
-                    customLabel="HTML + CSS (Sass | Bootstrap | Tailwind)"
+                    customLabel="HTML + CSS (Sass | Bootstrap)"
                     className="progressBar"
                     bgColor="#6a39ff"
                     height="12px"
@@ -182,7 +182,7 @@ const Main = () => {
                 <div className="grid-skill">
                   <ProgressBar
                     completed={80}
-                    customLabel="Javascript (ReactJS | NodeJS | Webpack)"
+                    customLabel="Javascript (ReactJS | NodeJS)"
                     className="progressBar"
                     bgColor="#6a39ff"
                     height="12px"
