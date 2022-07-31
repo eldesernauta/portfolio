@@ -1,58 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 // Color Scheme
-$primary: #5e3ff6 !default;
-$secondary: #f6cf3f !default;
-$info: #3ff66e !default;
+$primary: #6a39ff !default;
+$secondary: #a347e5 !default;
+$info: #ce70e8 !default;
 $success: #e96bd4 !default;
-$warning: #c1a584 !default;
+$warning: #ffd4c4 !default;
 $light: #dbdbdb !default;
 $dark: #111 !default;
 
 @font-face {
-  font-family: "Wild Nature";
-  src: url(./assets/fonts/Wild_Nature.ttf);
+  font-family: "Sextape";
+  src: url(./assets/fonts/Sextape.ttf);
 }
 
-@font-face {
-    font-family: "American Grunge";
-    src: url(./assets/fonts/DK_American_Grunge.ttf);
-}
-
-@font-face {
-    font-family: "KGSecondChances";
-    src: url(./assets/fonts/KGSecondChancesSketch.ttf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: "KGSecondChances";
-    src: url(./assets/fonts/KGSecondChancesSolid.ttf);
-    font-weight: 600;
-}
-
-html, body, * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    //overflow: hidden;
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 * {
   font-family: "Roboto Mono", monospace;
   transition: 0.5s ease-in-out;
 }
+* {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
-body{
-    background-color: $dark;
+body {
+  background-color: $dark;
+}
+
+h1 {
+  font-family: "Sextape";
+  font-weight: 400;
 }
 
 h1,
 h2,
-h3 {
-  font-family: "KGSecondChances";
-  font-weight: 400;
-  letter-spacing: 4px;
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $light;
 }
 
 .App {
