@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/main.scss";
 import pic from "../assets/portrait.png";
-import rocketStudies from "../assets/education.gif"
+//import rocketStudies from "../assets/education.gif"
 import ReactTooltip from "react-tooltip";
 import ProgressBar from "@ramonak/react-progress-bar";
 
