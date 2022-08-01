@@ -238,6 +238,7 @@ $time-4: 200s;
     }
     &:hover {
       border-color: $primary;
+      background-color: $primary;
     }
   }
 
@@ -245,6 +246,10 @@ $time-4: 200s;
     min-height: 90vh;
     z-index: 2;
     background-color: $light;
+
+    .animation-wrapper {
+      height: 90vh !important;
+    }
 
     .content {
       width: 100%;
@@ -416,7 +421,7 @@ $time-4: 200s;
       button {
         background-color: transparent;
         position: absolute;
-        bottom: calc(50% - 20px);
+        bottom: 2em;
         left: 2em;
         border-radius: 10px;
         color: $light;
@@ -437,6 +442,15 @@ $time-4: 200s;
           bottom: 1em;
           left: 1em;
         }
+      }
+
+      .rocket-studies{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 200px;
+        mix-blend-mode: darken; 
+        z-index: 0;
       }
 
       &:hover {
@@ -566,7 +580,7 @@ $time-4: 200s;
         background-color: transparent;
         position: absolute;
         top: 2em;
-        right: calc(50% - 20px);
+        right: 2em;
         border-radius: 10px;
         color: $light;
         width: 35px;

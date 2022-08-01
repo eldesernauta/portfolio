@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/main.scss";
 import pic from "../assets/portrait.png";
+import rocketStudies from "../assets/education.gif"
 import ReactTooltip from "react-tooltip";
 import ProgressBar from "@ramonak/react-progress-bar";
 
@@ -270,6 +271,8 @@ const Main = () => {
             >
               <i className="fa fa-caret-left"></i>
             </button>
+
+            {/*<img src={rocketStudies} className="rocket-studies" alt='rocket studies'/>*/}
           </div>
         </div>
 
