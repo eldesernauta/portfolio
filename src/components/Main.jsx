@@ -165,7 +165,7 @@ const Main = () => {
                 <div className="grid-ed">
                   <h3>FULL STACK WEB DEVELOPMENT MASTER</h3>
                   <p>
-                    Active student in Master’s degree focused on Full Stack web
+                    Active member in Master’s degree focused on Full Stack web
                     development.
                     <br />
                     (Catalonia, Spain)
@@ -343,7 +343,7 @@ const Main = () => {
           <div className="content">
             <div
               className="quarter-column"
-              data-tip="Project made on 2021 that includes my own photographies and development using ReactJs, Sass, Webpack and CI/CD."
+              data-tip="Project made on 2021 that includes my own photos and development using ReactJs, Sass, Webpack and CI/CD."
               data-background-color="#e96bd4"
               data-text-color="#111"
               data-place="top"
@@ -412,7 +412,7 @@ const Main = () => {
               className="quarter-column"
               data-tip="More than a Web Developer I am also a photographer."
               data-background-color="#a347e5"
-              data-text-color="#111"
+              data-text-color="#dbdbdb"
               data-place="top"
               onMouseEnter={() => showTooltip(true)}
               onMouseLeave={() => {
@@ -445,15 +445,6 @@ const Main = () => {
                   </li>
                   <li>
                     <a
-                      href="mailto:hola@eldesernauta.com"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="far fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
                       href="https://github.com/eldesernauta"
                       target="_blank"
                       rel="noreferrer"
@@ -479,6 +470,15 @@ const Main = () => {
                       <i className="fa fa-behance"></i>
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="mailto:hola@eldesernauta.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="far fa-envelope"></i>
+                    </a>
+                  </li>
                 </ul>
                 <p>
                   {" "}
@@ -498,6 +498,7 @@ const Main = () => {
           multiline
           resizeHide="true"
           delayShow={100}
+          className="tooltip"
         />
       )}
     </>

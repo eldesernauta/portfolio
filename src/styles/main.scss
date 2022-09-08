@@ -488,8 +488,13 @@ $time-4: 200s;
         text-decoration: underline;
       }
 
+      p {
+        color: $light !important;
+      }
+
       .grid-studies {
         display: flex;
+
         @include for-tablet-landscape {
           flex-direction: column;
         }
@@ -516,6 +521,10 @@ $time-4: 200s;
     &:hover {
       .content {
         color: $light !important;
+
+        p {
+          color: $dark !important;
+        }
 
         button {
           background-color: $dark;
@@ -650,6 +659,10 @@ $time-4: 200s;
         text-decoration: underline;
       }
 
+      p {
+        color: $light !important;
+      }
+
       .experience {
         display: flex;
         flex-direction: column;
@@ -684,6 +697,9 @@ $time-4: 200s;
     &:hover {
       .content {
         color: $light !important;
+        p {
+          color: $dark !important;
+        }
       }
 
       button {

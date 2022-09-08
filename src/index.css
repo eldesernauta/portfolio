@@ -17,6 +17,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.tooltip{
+  max-width: 200px;
+  text-align: center;
+}
 .popup-content,
 .modal-spot-content {
   background-color: #111 !important;
