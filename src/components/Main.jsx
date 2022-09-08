@@ -5,6 +5,9 @@ import pic from "../assets/portrait.png";
 import ReactTooltip from "react-tooltip";
 import ProgressBar from "@ramonak/react-progress-bar";
 
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+
 const Main = () => {
   const [tooltip, showTooltip] = useState(true);
 
@@ -92,12 +95,10 @@ const Main = () => {
     }
   };
 
-
   return (
     <>
       <div className="row">
         <div className={isFold1 ? "Box1" : "Box1 Box1-fold"}>
-
           <div className="animation-wrapper">
             <div className="particle particle-1"></div>
             <div className="particle particle-2"></div>
@@ -361,31 +362,53 @@ const Main = () => {
               </a>
             </div>
 
-            <div
-              className="quarter-column"
-              data-tip="Project made on 2022 that includes my own photographies, design and development using ReactJs, Sass, Webpack and CI/CD."
-              data-background-color="#ce70e8"
-              data-text-color="#111"
-              data-place="top"
-              onMouseEnter={() => showTooltip(true)}
-              onMouseLeave={() => {
-                showTooltip(false);
-                setTimeout(() => showTooltip(true), 50);
-              }}
-            >
-              <h2>T.Fish</h2>
-              <a
-                href="https://tfish.eldesernauta.com/"
-                target="_blank"
-                rel="noreferrer"
+            <div className="quarter-column">
+              <h2>Spot Insurance</h2>
+
+              <Popup
+                id="spot-modal"
+                className="modal-spot"
+                trigger={<button className="button"> View More </button>}
+                modal
+                nested
               >
-                View Page
-              </a>
+                {(close) => (
+                  <div className="modal">
+                    <button className="close" onClick={close}>
+                      &times;
+                    </button>
+                    <h2>
+                      {" "}
+                      <a
+                        href="https://getspot.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Spot Insurance
+                      </a>
+                    </h2>
+                    <p>
+                      Currently I am part of a Austin, Texas startup's
+                      Engineering Team working as Frontend Developer. My main
+                      job consists on updating and consolidating the whole
+                      site's layout and structure using technologies as ReactJS,
+                      Babel, NodeJS, Typescript, Sass, Tailwind, Webpack,
+                      Github, AWS, Webflow, etc.
+                    </p>
+                    <br />
+                    <p>
+                      We passed from using unnecesary and SEO unfriendly
+                      subdomains to a whole consolidated site using a SEO
+                      friendly URL structure and a highly detailed design system
+                    </p>
+                  </div>
+                )}
+              </Popup>
             </div>
 
             <div
               className="quarter-column"
-              data-tip="Startup I'm currently working for as frontend developer using different technologies as ReactJS, AWS, Git, Webpack and others."
+              data-tip="More than a Web Developer I am also a photographer."
               data-background-color="#a347e5"
               data-text-color="#111"
               data-place="top"
@@ -395,9 +418,13 @@ const Main = () => {
                 setTimeout(() => showTooltip(true), 50);
               }}
             >
-              <h2>Spot Insurance</h2>
-              <a href="https://getspot.com/" target="_blank" rel="noreferrer">
-                View Page
+              <h2>Photography</h2>
+              <a
+                href="https://ph.eldesernauta.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Photos
               </a>
             </div>
 
