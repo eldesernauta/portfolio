@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/main.scss";
 import pic from "../assets/portrait.png";
+import popupGif from "../assets/spot.gif";
 //import rocketStudies from "../assets/education.gif"
 import ReactTooltip from "react-tooltip";
 import ProgressBar from "@ramonak/react-progress-bar";
@@ -378,7 +379,6 @@ const Main = () => {
                       &times;
                     </button>
                     <h2>
-                      {" "}
                       <a
                         href="https://getspot.com/"
                         target="_blank"
@@ -399,8 +399,10 @@ const Main = () => {
                     <p>
                       We passed from using unnecesary and SEO unfriendly
                       subdomains to a whole consolidated site using a SEO
-                      friendly URL structure and a highly detailed design system.
+                      friendly URL structure and a highly detailed design
+                      system.
                     </p>
+                    <img src={popupGif} alt="" className="spotGif" />
                   </div>
                 )}
               </Popup>
