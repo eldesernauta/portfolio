@@ -221,6 +221,12 @@ $time-4: 200s;
         &:active {
           border: 0;
         }
+        @include for-phone() {
+          width: 20px;
+          height: 20px;
+          left: calc(50% - 5px);
+          bottom: 0;
+        }
       }
 
       &:hover {
@@ -439,9 +445,11 @@ $time-4: 200s;
         &:active {
           border: 0;
         }
-        @include for-tablet-portrait {
-          bottom: 1em;
-          left: 1em;
+        @include for-phone() {
+          width: 20px;
+          height: 20px;
+          left: 0;
+          bottom: 0;
         }
       }
 
@@ -611,9 +619,11 @@ $time-4: 200s;
         &:active {
           border: 0;
         }
-        @include for-tablet-portrait {
-          top: 1em;
-          right: 1em;
+        @include for-phone() {
+          width: 20px;
+          height: 20px;
+          right: 0;
+          top: 0;
         }
       }
 
@@ -761,6 +771,9 @@ $time-4: 200s;
             @include for-tablet-portrait {
               font-size: 10px !important;
               right: 0;
+              padding: 0 5px;
+              border-top: 3px solid $light;
+              border-left: 3px solid $light;
             }
           }
 
@@ -816,6 +829,9 @@ $time-4: 200s;
             @include for-tablet-portrait {
               font-size: 10px !important;
               right: 0;
+              padding: 0 5px;
+              border-top: 3px solid $light;
+              border-left: 3px solid $light;
             }
           }
 
@@ -870,6 +886,9 @@ $time-4: 200s;
             @include for-tablet-portrait {
               font-size: 10px !important;
               right: 0;
+              padding: 0 5px;
+              border-top: 3px solid $light;
+              border-left: 3px solid $light;
             }
           }
 
