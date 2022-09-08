@@ -25,6 +25,12 @@ code {
 .popup-content h2{
   margin-bottom: 20px;
 }
+.popup-content a{
+  color: #dbdbdb;
+}
+.popup-content a:hover{
+  color: #f2fd00
+}
 .popup-overlay{
   background-color: transparent !important;
 }

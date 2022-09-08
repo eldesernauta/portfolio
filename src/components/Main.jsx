@@ -399,7 +399,7 @@ const Main = () => {
                     <p>
                       We passed from using unnecesary and SEO unfriendly
                       subdomains to a whole consolidated site using a SEO
-                      friendly URL structure and a highly detailed design system
+                      friendly URL structure and a highly detailed design system.
                     </p>
                   </div>
                 )}
