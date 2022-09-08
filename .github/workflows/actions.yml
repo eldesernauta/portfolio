@@ -10,8 +10,6 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2
-      with:
-          clean: false
           
     - name: Use Node.js 16
       uses: actions/setup-node@v2
