@@ -207,13 +207,12 @@ $time-4: 200s;
         position: absolute;
         bottom: 2em;
         left: calc(50% - 20px);
-        border-radius: 10px;
-        color: $light;
+        color: $primary;
         width: 35px;
         height: 35px;
         border: 0;
         opacity: 0;
-        z-index: 9;
+        z-index: 99999;
 
         &:hover {
           cursor: pointer;
@@ -229,6 +228,8 @@ $time-4: 200s;
 
         button {
           opacity: 1;
+          background-color: $dark;
+          color: $primary;
         }
       }
 
@@ -282,6 +283,7 @@ $time-4: 200s;
 
       button {
         background-color: $primary;
+        color: $light;
         opacity: 1;
 
         i {
@@ -423,8 +425,8 @@ $time-4: 200s;
         position: absolute;
         bottom: 2em;
         left: 2em;
-        border-radius: 10px;
-        color: $light;
+        color: $secondary;
+        background-color: $dark;
         font-weight: 600;
         width: 35px;
         height: 35px;
@@ -433,7 +435,6 @@ $time-4: 200s;
 
         &:hover {
           cursor: pointer;
-          background-color: $dark;
         }
         &:active {
           border: 0;
@@ -444,12 +445,12 @@ $time-4: 200s;
         }
       }
 
-      .rocket-studies{
+      .rocket-studies {
         position: absolute;
         bottom: 0;
         right: 0;
         width: 200px;
-        mix-blend-mode: darken; 
+        mix-blend-mode: darken;
         z-index: 0;
       }
 
@@ -496,6 +497,7 @@ $time-4: 200s;
 
       button {
         background-color: $secondary;
+        color: $dark;
         opacity: 1;
         z-index: 9;
 
@@ -514,6 +516,11 @@ $time-4: 200s;
     &:hover {
       .content {
         color: $light !important;
+
+        button {
+          background-color: $dark;
+          color: $secondary;
+        }
       }
     }
   }
@@ -581,8 +588,8 @@ $time-4: 200s;
         position: absolute;
         top: 2em;
         right: 2em;
-        border-radius: 10px;
-        color: $light;
+        color: $info;
+        background-color: $dark;
         width: 35px;
         height: 35px;
         border: 0;
@@ -660,6 +667,7 @@ $time-4: 200s;
 
       button {
         background-color: $info;
+        color: $dark;
         opacity: 1;
 
         i {
@@ -676,6 +684,11 @@ $time-4: 200s;
     &:hover {
       .content {
         color: $light !important;
+      }
+
+      button {
+        background-color: $dark;
+        color: $info;
       }
     }
   }
@@ -713,17 +726,21 @@ $time-4: 200s;
 
           a {
             opacity: 0;
+            font-size: 14px;
             position: absolute;
-            bottom: 1em;
-            right: 1em;
-            background-color: $success;
+            bottom: 0;
+            right: 0;
+            padding: 0 10px;
+            transform: translateX(50px);
+            border-top: 5px solid $light;
+            border-left: 5px solid $light;
             color: $light;
             text-decoration: none;
 
             &:hover {
               background-color: transparent;
               text-decoration: underline;
-              color: white;
+              color: $light;
             }
             @include for-tablet-portrait {
               font-size: 10px !important;
@@ -737,6 +754,13 @@ $time-4: 200s;
 
             a {
               opacity: 1;
+              background-color: $dark;
+              transform: translateX(0);
+
+              &:hover {
+                text-decoration: none;
+                background-color: $success;
+              }
             }
           }
           @include for-tablet-portrait {
@@ -752,14 +776,19 @@ $time-4: 200s;
           border-bottom: 5px solid $light;
           background-position: center center;
           box-shadow: $dark -500px -500px inset;
-          background-image: url(../assets/tfish-cover.jpg);
+          background-image: url(../assets/spot-cover.png);
 
-          a {
+          .button {
             opacity: 0;
+            font-size: 14px;
             position: absolute;
-            bottom: 1em;
-            right: 1em;
-            background-color: $info;
+            bottom: 0;
+            right: 0;
+            padding: 0 10px;
+            transform: translateX(50px);
+            border: 0;
+            border-top: 5px solid $light;
+            border-left: 5px solid $light;
             color: $light;
             text-decoration: none;
 
@@ -773,12 +802,21 @@ $time-4: 200s;
               right: 0;
             }
           }
+
           &:hover {
             box-shadow: $info 0px 0px inset;
             transition: 0.3s ease-in-out;
 
-            a {
+            .button {
               opacity: 1;
+              background-color: $dark;
+              transform: translateX(0);
+
+              &:hover {
+                text-decoration: none;
+                cursor: pointer;
+                background-color: $info;
+              }
             }
           }
           @include for-tablet-portrait {
@@ -793,21 +831,25 @@ $time-4: 200s;
           border-bottom: 5px solid $light;
           background-position: center center;
           box-shadow: $dark -500px -500px inset;
-          background-image: url(../assets/spot-cover.png);
+          background-image: url(../assets/ph-cover.png);
 
           a {
             opacity: 0;
+            font-size: 14px;
             position: absolute;
-            bottom: 1em;
-            right: 1em;
-            background-color: $secondary;
+            bottom: 0;
+            right: 0;
+            padding: 0 10px;
+            transform: translateX(50px);
+            border-top: 5px solid $light;
+            border-left: 5px solid $light;
             color: $light;
             text-decoration: none;
 
             &:hover {
               background-color: transparent;
               text-decoration: underline;
-              color: white;
+              color: $light;
             }
             @include for-tablet-portrait {
               font-size: 10px !important;
@@ -821,6 +863,13 @@ $time-4: 200s;
 
             a {
               opacity: 1;
+              background-color: $dark;
+              transform: translateX(0);
+
+              &:hover {
+                text-decoration: none;
+                background-color: $secondary;
+              }
             }
           }
           @include for-tablet-portrait {
@@ -901,7 +950,7 @@ $time-4: 200s;
             box-shadow: $primary -5px -5px inset;
             background-color: $primary;
 
-            .social{
+            .social {
               display: flex !important;
             }
           }
