@@ -339,7 +339,7 @@ $time-4: 200s;
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        margin-top: 2em;
+        margin-top: 1em;
 
         .grid-education {
           display: flex;
@@ -349,13 +349,13 @@ $time-4: 200s;
 
           .grid-ed {
             width: 33%;
-            margin: 0 1em;
+            margin: 0 0.5em;
             h3 {
               color: $success;
             }
 
             p {
-              margin-top: 1em;
+              margin-top: 0.5em;
               font-size: 14px;
               @include for-laptop {
                 font-size: 12px;
@@ -412,11 +412,12 @@ $time-4: 200s;
 
           .grid-skill {
             display: flex;
+            min-height: 20px;
             width: 100%;
 
             .progressBar {
               width: 100%;
-              margin: 0 0 1.5em;
+              margin: 0 0 0.5em;
             }
           }
           @include for-laptop {
@@ -487,6 +488,7 @@ $time-4: 200s;
   .Box2-fold {
     min-width: 90vw;
     z-index: 2;
+    background-color: $dark;
 
     .content {
       width: 100%;
@@ -565,12 +567,11 @@ $time-4: 200s;
         display: none;
         transform: translateX(-900px);
         position: absolute;
-        margin-top: 2em;
+        margin-top: 1em;
 
         .exp {
           display: flex;
           flex-direction: column;
-          gap: 1em;
 
           h3 {
             color: $primary;
@@ -624,6 +625,7 @@ $time-4: 200s;
         &:active {
           border: 0;
         }
+
         @include for-phone() {
           width: 20px;
           height: 20px;
@@ -660,6 +662,7 @@ $time-4: 200s;
   .Box3-fold {
     min-height: 90vh;
     z-index: 2;
+    background-color: $dark;
 
     .content {
       width: 100%;
