@@ -112,11 +112,10 @@ const Main = () => {
             <p className="subtitle">Web Developer / Photographer</p>
             <p>
               Colombian-born publicist focused on development. Big sense of
-              responsability, leadership oriented and really good
-              comunicative-argumentative skills that highlights my written and
-              oral work and allows me to have a great teamwork. My artish
-              background riched me out with a huge aesthetic perception that
-              helps me to create good looking layouts in detail.
+              responsibility, leadership oriented and really good communicative
+              skills that highlights my great team work. Not only that, my
+              artish background helps me to create pretty impressive layouts in
+              detail.
             </p>
             <img src={pic} className="portrait" alt="Portrait" />
             <button
@@ -181,10 +180,10 @@ const Main = () => {
                 <div className="grid-skill">
                   <ProgressBar
                     completed={95}
-                    customLabel="HTML + CSS (Sass | Bootstrap)"
+                    customLabel="HTML + CSS (Tailwind | Sass | Bootstrap)"
                     className="progressBar"
                     bgColor="#6a39ff"
-                    height="12px"
+                    height="20px"
                     labelSize="12px"
                     labelAlignment="left"
                     labelColor="#111"
@@ -198,7 +197,7 @@ const Main = () => {
                     customLabel="Javascript (ReactJS | NodeJS)"
                     className="progressBar"
                     bgColor="#6a39ff"
-                    height="12px"
+                    height="20px"
                     labelSize="12px"
                     labelAlignment="left"
                     labelColor="#111"
@@ -212,7 +211,7 @@ const Main = () => {
                     customLabel="AWS"
                     className="progressBar"
                     bgColor="#6a39ff"
-                    height="12px"
+                    height="20px"
                     labelSize="12px"
                     labelAlignment="left"
                     labelColor="#111"
@@ -226,7 +225,7 @@ const Main = () => {
                     customLabel="Git"
                     className="progressBar"
                     bgColor="#6a39ff"
-                    height="12px"
+                    height="20px"
                     labelSize="12px"
                     labelAlignment="left"
                     labelColor="#111"
@@ -240,7 +239,7 @@ const Main = () => {
                     customLabel="Photoshop | Illustrator"
                     className="progressBar"
                     bgColor="#6a39ff"
-                    height="12px"
+                    height="20px"
                     labelSize="12px"
                     labelAlignment="left"
                     labelColor="#111"
@@ -254,7 +253,7 @@ const Main = () => {
                     customLabel="English"
                     className="progressBar"
                     bgColor="#6a39ff"
-                    height="12px"
+                    height="20px"
                     labelSize="12px"
                     labelAlignment="left"
                     labelColor="#111"
@@ -292,13 +291,13 @@ const Main = () => {
                   (Bilingual) - (Austin, Texas - USA)
                 </p>
                 <h6>
-                  Austin Software
+                  Howdy Inc.
                   <br />
-                  Mar. 2022 - Present
+                  Mar. 2022 - Jan. 2023
                 </h6>
               </div>
               <div className="exp">
-                <h3>WEB DESIGNER / FRONTEND</h3>
+                <h3>FRONTEND DEVELOPER</h3>
                 <p>
                   Design, programming / building and managing websites for
                   company clients, edit plugins and create responsive layouts
@@ -388,19 +387,18 @@ const Main = () => {
                       </a>
                     </h2>
                     <p>
-                      Currently I am part of a Austin, Texas startup's
-                      Engineering Team working as Frontend Developer. My main
-                      job consists on updating and consolidating the whole
-                      site's layout and structure using technologies as ReactJS,
-                      Babel, NodeJS, Typescript, Sass, Tailwind, Webpack,
-                      Github, AWS, Webflow, etc.
+                      I was part of an Austin, Texas startup's Engineering Team
+                      working as Frontend Developer. My main job consisted on
+                      consolidating and rebuilding the whole site's layout and
+                      structure using technologies as ReactJS, Babel, NodeJS,
+                      Typescript, Sass, Tailwind, Webpack, Github, AWS, Webflow,
+                      etc.
                     </p>
                     <br />
                     <p>
                       We passed from using unnecesary and SEO unfriendly
-                      subdomains to a whole consolidated site using a SEO
-                      friendly URL structure and a highly detailed design
-                      system.
+                      subdomains to a whole consolidated site that allows a SEO
+                      friendly URL structure and a detailed design system.
                     </p>
                     <img src={popupGif} alt="" className="spotGif" />
                   </div>
@@ -450,15 +448,6 @@ const Main = () => {
                       rel="noreferrer"
                     >
                       <i className="fa fa-github"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/eldesernauta"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="fa fa-instagram"></i>
                     </a>
                   </li>
                   <li>
