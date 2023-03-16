@@ -99,7 +99,10 @@ const Main = () => {
   return (
     <>
       <div className="row">
-        <div className={isFold1 ? "Box1" : "Box1 Box1-fold"}>
+        <div
+          className={isFold1 ? "Box1" : "Box1 Box1-fold"}
+          onClick={handleToggle1}
+        >
           <div className="animation-wrapper">
             <div className="particle particle-1"></div>
             <div className="particle particle-2"></div>
@@ -129,7 +132,10 @@ const Main = () => {
           </div>
         </div>
 
-        <div className={isFold2 ? "Box2" : "Box2 Box2-fold"}>
+        <div
+          className={isFold2 ? "Box2" : "Box2 Box2-fold"}
+          onClick={handleToggle2}
+        >
           <div className="content">
             <h2>Education / Skills</h2>
             <div className="grid-studies">
@@ -182,7 +188,7 @@ const Main = () => {
                     completed={95}
                     customLabel="HTML + CSS (Tailwind | Sass | Bootstrap)"
                     className="progressBar"
-                    bgColor="#6a39ff"
+                    bgColor="#B980FF"
                     height="20px"
                     labelSize="12px"
                     labelAlignment="left"
@@ -196,7 +202,7 @@ const Main = () => {
                     completed={80}
                     customLabel="Javascript (ReactJS | NodeJS)"
                     className="progressBar"
-                    bgColor="#6a39ff"
+                    bgColor="#B980FF"
                     height="20px"
                     labelSize="12px"
                     labelAlignment="left"
@@ -210,7 +216,7 @@ const Main = () => {
                     completed={50}
                     customLabel="AWS"
                     className="progressBar"
-                    bgColor="#6a39ff"
+                    bgColor="#B980FF"
                     height="20px"
                     labelSize="12px"
                     labelAlignment="left"
@@ -224,7 +230,7 @@ const Main = () => {
                     completed={70}
                     customLabel="Git"
                     className="progressBar"
-                    bgColor="#6a39ff"
+                    bgColor="#B980FF"
                     height="20px"
                     labelSize="12px"
                     labelAlignment="left"
@@ -238,7 +244,7 @@ const Main = () => {
                     completed={90}
                     customLabel="Photoshop | Illustrator"
                     className="progressBar"
-                    bgColor="#6a39ff"
+                    bgColor="#B980FF"
                     height="20px"
                     labelSize="12px"
                     labelAlignment="left"
@@ -252,7 +258,7 @@ const Main = () => {
                     completed={80}
                     customLabel="English"
                     className="progressBar"
-                    bgColor="#6a39ff"
+                    bgColor="#B980FF"
                     height="20px"
                     labelSize="12px"
                     labelAlignment="left"
@@ -277,7 +283,10 @@ const Main = () => {
           </div>
         </div>
 
-        <div className={isFold3 ? "Box3" : "Box3 Box3-fold"}>
+        <div
+          className={isFold3 ? "Box3" : "Box3 Box3-fold"}
+          onClick={handleToggle3}
+        >
           <div className="content">
             <h2>Experience</h2>
             <div className="experience">
@@ -343,7 +352,7 @@ const Main = () => {
             <div
               className="quarter-column"
               data-tip="Project made on 2021 that includes my own photos and development using ReactJs, Sass, Webpack and CI/CD."
-              data-background-color="#e96bd4"
+              data-background-color="#b980ff"
               data-text-color="#111"
               data-place="top"
               onMouseEnter={() => showTooltip(true)}
@@ -409,8 +418,8 @@ const Main = () => {
             <div
               className="quarter-column"
               data-tip="More than a Web Developer I am also a photographer."
-              data-background-color="#a347e5"
-              data-text-color="#dbdbdb"
+              data-background-color="#2cff8f"
+              data-text-color="#111"
               data-place="top"
               onMouseEnter={() => showTooltip(true)}
               onMouseLeave={() => {
