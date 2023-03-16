@@ -480,7 +480,7 @@ const Main = () => {
                 </ul>
                 <p>
                   {" "}
-                  2022 <span>©</span> eldesernauta
+                  2023 <span>©</span> eldesernauta
                 </p>
               </div>
             </div>
