@@ -311,7 +311,6 @@ $time-4: 200s;
         button {
           background-color: $primary;
           color: $light;
-  
         }
       }
     }
@@ -320,7 +319,6 @@ $time-4: 200s;
   .Box2 {
     top: 0;
     right: 0;
-
     .content {
       width: 100%;
       height: 100%;
@@ -331,6 +329,8 @@ $time-4: 200s;
 
       h2 {
         text-align: center;
+        color: $light;
+    
       }
 
       .grid-studies {
@@ -351,7 +351,7 @@ $time-4: 200s;
             width: 33%;
             margin: 0 0.5em;
             h3 {
-              color: $success;
+              color: $dark;
             }
 
             p {
@@ -368,7 +368,7 @@ $time-4: 200s;
 
             h6 {
               margin-top: 1em;
-              color: $warning;
+              color: $primary;
             }
             @include for-laptop {
               margin: 0 0.3em !important;
@@ -482,6 +482,10 @@ $time-4: 200s;
 
     &:hover {
       border-color: $secondary;
+
+      h2 {
+        color: $dark;
+      }
     }
   }
 
@@ -509,6 +513,9 @@ $time-4: 200s;
 
       .grid-studies {
         display: flex;
+        h3 {
+          color: $secondary !important;
+        }
 
         @include for-tablet-landscape {
           flex-direction: column;
@@ -537,10 +544,17 @@ $time-4: 200s;
       .content {
         color: $light !important;
 
+        h2{
+          color: $dark !important;
+        }
+
         p {
           color: $dark !important;
         }
 
+        h3 {
+          color: $dark !important;
+        }
         button {
           background-color: $dark;
           color: $secondary;
@@ -561,6 +575,10 @@ $time-4: 200s;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      h2{
+        color: $light;
+      }
 
       .experience {
         width: 70%;
@@ -589,7 +607,7 @@ $time-4: 200s;
 
           h6 {
             margin-top: 1em;
-            color: $warning;
+            color: $primary;
             @include for-tablet-portrait {
               margin-top: 0;
               margin-bottom: 1em;
@@ -611,7 +629,7 @@ $time-4: 200s;
         position: absolute;
         top: 2em;
         right: 2em;
-        color: $info;
+        color: $accent;
         background-color: $dark;
         width: 35px;
         height: 35px;
@@ -635,7 +653,7 @@ $time-4: 200s;
       }
 
       &:hover {
-        background-color: $info;
+        background-color: $accent;
 
         button {
           opacity: 1;
@@ -655,7 +673,11 @@ $time-4: 200s;
     }
 
     &:hover {
-      border-color: $info;
+      border-color: $accent;
+
+      h2{
+        color:$dark;
+      }
     }
   }
 
@@ -677,8 +699,16 @@ $time-4: 200s;
         text-decoration: underline;
       }
 
+      h3{
+        color: $accent !important;
+      }
+
       p {
         color: $light !important;
+      }
+
+      h6{
+        color: $primary !important;
       }
 
       .experience {
@@ -697,7 +727,7 @@ $time-4: 200s;
       }
 
       button {
-        background-color: $info;
+        background-color: $accent;
         color: $dark;
         opacity: 1;
 
@@ -715,6 +745,13 @@ $time-4: 200s;
     &:hover {
       .content {
         color: $light !important;
+
+        h2{
+          color: $dark !important;
+        }
+        h3{
+          color: $dark !important;
+        }
         p {
           color: $dark !important;
         }
@@ -722,7 +759,7 @@ $time-4: 200s;
 
       button {
         background-color: $dark;
-        color: $info;
+        color: $accent;
       }
     }
   }
@@ -786,7 +823,7 @@ $time-4: 200s;
           }
 
           &:hover {
-            box-shadow: $success 0px 0px inset;
+            box-shadow: $primary 0px 0px inset;
             transition: 0.3s ease-in-out;
 
             a {
@@ -796,7 +833,7 @@ $time-4: 200s;
 
               &:hover {
                 text-decoration: none;
-                background-color: $success;
+                background-color: $primary;
               }
             }
           }
@@ -832,7 +869,7 @@ $time-4: 200s;
             &:hover {
               background-color: transparent;
               text-decoration: underline;
-              color: white;
+              color: $dark;
             }
             @include for-tablet-portrait {
               font-size: 10px !important;
@@ -844,7 +881,7 @@ $time-4: 200s;
           }
 
           &:hover {
-            box-shadow: $info 0px 0px inset;
+            box-shadow: $secondary 0px 0px inset;
             transition: 0.3s ease-in-out;
 
             .button {
@@ -855,7 +892,7 @@ $time-4: 200s;
               &:hover {
                 text-decoration: none;
                 cursor: pointer;
-                background-color: $info;
+                background-color: $secondary;
               }
             }
           }
@@ -889,7 +926,7 @@ $time-4: 200s;
             &:hover {
               background-color: transparent;
               text-decoration: underline;
-              color: $light;
+              color: $dark;
             }
             @include for-tablet-portrait {
               font-size: 10px !important;
@@ -901,8 +938,8 @@ $time-4: 200s;
           }
 
           &:hover {
-            box-shadow: $secondary 0px 0px inset;
-            background-color: $secondary;
+            box-shadow: $accent 0px 0px inset;
+            background-color: $accent;
 
             a {
               opacity: 1;
@@ -911,7 +948,7 @@ $time-4: 200s;
 
               &:hover {
                 text-decoration: none;
-                background-color: $secondary;
+                background-color: $accent;
               }
             }
           }
