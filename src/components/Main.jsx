@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/main.scss";
 import pic from "../assets/portrait.png";
 import popupGif from "../assets/spot.gif";
@@ -12,96 +12,43 @@ import "reactjs-popup/dist/index.css";
 const Main = () => {
   const [tooltip, showTooltip] = useState(true);
 
-  const [isFold1, setFold1] = useState("false");
-  const [isFold2, setFold2] = useState("false");
-  const [isFold3, setFold3] = useState("false");
+  const [box1, setBox1] = useState("Box1");
+  const [box2, setBox2] = useState("Box2");
+  const [box3, setBox3] = useState("Box3");
 
-  const Box1 = document.querySelector(".Box1");
-  const Box2 = document.querySelector(".Box2");
-  const Box3 = document.querySelector(".Box3");
-
-  const handleToggle1 = () => {
-    setTimeout(() => {
-      setFold1(!isFold1);
-    }, 200);
-
-    const BoxActive = document.querySelector(".Box1");
-
-    if (!BoxActive.classList.contains("Box1-fold")) {
-      Box1.style.minHeight = "90vh";
-      Box1.style.maxHeight = "90vh";
-      Box3.style.maxHeight = "10vh";
-      Box3.style.minHeight = "10vh";
-      document.getElementById("btnBox2").style.display = "none";
-      document.getElementById("btnBox3").style.display = "none";
-    } else {
-      Box1.style.minHeight = "50vh";
-      Box1.style.maxHeight = "50vh";
-      Box3.style.maxHeight = "50vh";
-      Box3.style.minHeight = "50vh";
-      document.getElementById("btnBox2").style.display = "block";
-      document.getElementById("btnBox3").style.display = "block";
+  useEffect(() => {
+    if (box1 === "Box1-fold") {
+      setBox2("Box2");
+      setBox3("Box3-height-xs");
     }
-  };
-
-  const handleToggle2 = () => {
-    setTimeout(() => {
-      setFold2(!isFold2);
-    }, 200);
-
-    const BoxActive = document.querySelector(".Box2");
-
-    if (!BoxActive.classList.contains("Box2-fold")) {
-      Box2.style.minWidth = "90vw";
-      Box2.style.maxWidth = "90vw";
-      Box1.style.maxWidth = "10vw";
-      Box1.style.minWidth = "10vw";
-      document.getElementById("btnBox1").style.display = "none";
-      document.getElementById("btnBox3").style.display = "none";
-      Box1.querySelector("h1").style.fontSize = "40px";
-    } else {
-      Box2.style.minWidth = "50vw";
-      Box2.style.maxWidth = "50vw";
-      Box1.style.maxWidth = "50vw";
-      Box1.style.minWidth = "50vw";
-      document.getElementById("btnBox1").style.display = "block";
-      document.getElementById("btnBox3").style.display = "block";
-      Box1.querySelector("h1").style.fontSize = "58px";
+    if (box2 === "Box2-fold") {
+      setBox1("Box1-width-xs");
+      setBox3("Box3");
     }
-  };
-
-  const handleToggle3 = () => {
-    setTimeout(() => {
-      setFold3(!isFold3);
-    }, 200);
-
-    const BoxActive = document.querySelector(".Box3");
-
-    if (!BoxActive.classList.contains("Box3-fold")) {
-      Box3.style.minHeight = "90vh";
-      Box3.style.maxHeight = "90vh";
-      Box1.style.maxHeight = "10vh";
-      Box1.style.minHeight = "10vh";
-      document.getElementById("btnBox1").style.display = "none";
-      document.getElementById("btnBox2").style.display = "none";
-      Box1.querySelector(".content").style.padding = "0";
-    } else {
-      Box3.style.minHeight = "50vh";
-      Box3.style.maxHeight = "50vh";
-      Box1.style.maxHeight = "50vh";
-      Box1.style.minHeight = "50vh";
-      document.getElementById("btnBox1").style.display = "block";
-      document.getElementById("btnBox2").style.display = "block";
-      Box1.querySelector(".content").style.padding = "2em";
+    if (box3 === "Box3-fold") {
+      setBox1("Box1-height-xs");
+      setBox2("Box2");
     }
-  };
+  }, [box1, box2, box3]);
 
   return (
     <>
       <div className="row">
         <div
-          className={isFold1 ? "Box1" : "Box1 Box1-fold"}
-          onClick={handleToggle1}
+          id="Box1"
+          className={`
+          Box1 
+          ${box1 === "Box1-fold" && "Box1-fold"} 
+          ${box2 === "Box2-fold" && "Box1-width-xs"}
+          ${box3 === "Box3-fold" && "Box1-height-xs"}
+          `}
+          onClick={() => {
+            if (box1 === "Box1") {
+              setBox1("Box1-fold");
+            } else {
+              setBox1("Box1");
+            }
+          }}
         >
           <div className="animation-wrapper">
             <div className="particle particle-1"></div>
@@ -111,7 +58,7 @@ const Main = () => {
           </div>
 
           <div className="content">
-            <h1>Oscar Rojas</h1>
+            <h1 id="name">Oscar Rojas</h1>
             <p className="subtitle">Web Developer / Photographer</p>
             <p>
               Colombian-born publicist focused on development. Big sense of
@@ -120,21 +67,21 @@ const Main = () => {
               artish background helps me to create pretty impressive layouts in
               detail.
             </p>
-            <img src={pic} className="portrait" alt="Portrait" />
-            <button
-              type="button"
-              id="btnBox1"
-              onClick={handleToggle1}
-              className="unfold-column"
-            >
-              <i className="fa fa-caret-down"></i>
-            </button>
+            {box1 === "Box1-fold" && (
+              <img src={pic} className="portrait" alt="Portrait" />
+            )}
           </div>
         </div>
 
         <div
-          className={isFold2 ? "Box2" : "Box2 Box2-fold"}
-          onClick={handleToggle2}
+          className={`Box2 ${box2 === "Box2-fold" && "Box2-fold"}`}
+          onClick={() => {
+            if (box2 === "Box2") {
+              setBox2("Box2-fold");
+            } else {
+              setBox2("Box2");
+            }
+          }}
         >
           <div className="content">
             <h2>Education / Skills</h2>
@@ -270,22 +217,21 @@ const Main = () => {
               </div>
             </div>
 
-            <button
-              type="button"
-              id="btnBox2"
-              onClick={handleToggle2}
-              className="unfold-column"
-            >
-              <i className="fa fa-caret-left"></i>
-            </button>
-
             {/*<img src={rocketStudies} className="rocket-studies" alt='rocket studies'/>*/}
           </div>
         </div>
 
         <div
-          className={isFold3 ? "Box3" : "Box3 Box3-fold"}
-          onClick={handleToggle3}
+          className={`Box3 ${box3 === "Box3-fold" && "Box3-fold"} ${
+            box1 === "Box1-fold" && "Box3-height-xs"
+          }`}
+          onClick={() => {
+            if (box3 === "Box3") {
+              setBox3("Box3-fold");
+            } else {
+              setBox3("Box3");
+            }
+          }}
         >
           <div className="content">
             <h2>Experience</h2>
@@ -336,14 +282,6 @@ const Main = () => {
                 </h6>
               </div>
             </div>
-            <button
-              type="button"
-              id="btnBox3"
-              onClick={handleToggle3}
-              className="unfold-column"
-            >
-              <i className="fa fa-caret-up"></i>
-            </button>
           </div>
         </div>
 

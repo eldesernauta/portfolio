@@ -59,6 +59,8 @@ $time-4: 200s;
     border-bottom: 5px solid;
     border-right: 5px solid;
     overflow: hidden;
+    transition: 0.5s ease-in-out;
+    transition-property: width, height, background-color;
 
     h2 {
       @include for-laptop {
@@ -69,8 +71,11 @@ $time-4: 200s;
   }
 
   .Box1 {
+    transition-property: width;
+    transition: height 0.5s ease-in-out;
     top: 0;
     left: 0;
+
     .animation-wrapper {
       position: fixed;
       top: 0;
@@ -178,6 +183,7 @@ $time-4: 200s;
 
         @include for-tablet-portrait {
           font-size: 10px !important;
+          text-align: center;
         }
       }
 
@@ -188,8 +194,9 @@ $time-4: 200s;
         z-index: 1;
 
         @include for-tablet-portrait {
-          font-size: 12px !important;
-          text-align: left;
+          font-size: 10px !important;
+          text-align: justify;
+          word-break: break-word;
         }
       }
 
@@ -202,41 +209,8 @@ $time-4: 200s;
         z-index: 0;
       }
 
-      button {
-        background-color: transparent;
-        position: absolute;
-        bottom: 2em;
-        left: calc(50% - 20px);
-        color: $primary;
-        width: 35px;
-        height: 35px;
-        border: 0;
-        opacity: 0;
-        z-index: 99999;
-
-        &:hover {
-          cursor: pointer;
-          background-color: $dark;
-        }
-        &:active {
-          border: 0;
-        }
-        @include for-phone() {
-          width: 20px;
-          height: 20px;
-          left: calc(50% - 5px);
-          bottom: 0;
-        }
-      }
-
       &:hover {
         background-color: $primary;
-
-        button {
-          opacity: 1;
-          background-color: $dark;
-          color: $primary;
-        }
       }
 
       @include for-tablet-portrait {
@@ -244,15 +218,22 @@ $time-4: 200s;
       }
     }
     &:hover {
+      cursor: pointer;
       border-color: $primary;
       background-color: $primary;
+
+      h1 {
+        z-index: 3;
+        color: $dark;
+      }
     }
   }
 
   .Box1-fold {
-    min-height: 90vh;
+    height: 90vh;
     z-index: 2;
     background-color: $light;
+    transition: height 0.5s ease-in-out;
 
     .animation-wrapper {
       height: 90vh !important;
@@ -273,6 +254,10 @@ $time-4: 200s;
         z-index: 3;
       }
 
+      .subtitle {
+        color: $dark;
+      }
+
       h4 {
         margin-left: 3px;
       }
@@ -286,21 +271,14 @@ $time-4: 200s;
         -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
         filter: grayscale(0%);
       }
-
-      button {
-        background-color: $primary;
-        color: $light;
-        opacity: 1;
-
-        i {
-          transform: rotate(180deg);
-        }
-      }
     }
     &:hover {
       .content {
         color: $light;
         h1 {
+          color: $dark;
+        }
+        .subtitle {
           color: $light;
         }
         img {
@@ -308,15 +286,41 @@ $time-4: 200s;
           -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
           filter: grayscale(100%) contrast(130%);
         }
-        button {
-          background-color: $primary;
-          color: $light;
-        }
       }
     }
   }
 
+  .Box1-height-xs {
+    height: 10vh;
+    transition: height 0.5s ease-in-out;
+
+    .content {
+      padding: 0 !important;
+      h1 {
+        font-size: 40px !important;
+      }
+    }
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+  .Box1-width-xs {
+    width: 10vw;
+    transition: width 0.5s ease-in-out;
+
+    .content {
+      padding: 0 !important;
+      h1 {
+        font-size: 40px !important;
+      }
+    }
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
   .Box2 {
+    transition: width 0.5s ease-in-out;
     top: 0;
     right: 0;
     .content {
@@ -330,7 +334,6 @@ $time-4: 200s;
       h2 {
         text-align: center;
         color: $light;
-    
       }
 
       .grid-studies {
@@ -432,33 +435,6 @@ $time-4: 200s;
         }
       }
 
-      button {
-        background-color: transparent;
-        position: absolute;
-        bottom: 2em;
-        left: 2em;
-        color: $secondary;
-        background-color: $dark;
-        font-weight: 600;
-        width: 35px;
-        height: 35px;
-        border: 0;
-        opacity: 0;
-
-        &:hover {
-          cursor: pointer;
-        }
-        &:active {
-          border: 0;
-        }
-        @include for-phone() {
-          width: 20px;
-          height: 20px;
-          left: 0;
-          bottom: 0;
-        }
-      }
-
       .rocket-studies {
         position: absolute;
         bottom: 0;
@@ -481,6 +457,7 @@ $time-4: 200s;
     }
 
     &:hover {
+      cursor: pointer;
       border-color: $secondary;
 
       h2 {
@@ -490,9 +467,10 @@ $time-4: 200s;
   }
 
   .Box2-fold {
-    min-width: 90vw;
+    width: 90vw;
     z-index: 2;
     background-color: $dark;
+    transition: width 0.5s ease-in-out;
 
     .content {
       width: 100%;
@@ -509,6 +487,12 @@ $time-4: 200s;
 
       p {
         color: $light !important;
+        text-align: justify;
+        word-break: break-word;
+        letter-spacing: -1px;
+      }
+      h6 {
+        color: $primary !important;
       }
 
       .grid-studies {
@@ -521,30 +505,12 @@ $time-4: 200s;
           flex-direction: column;
         }
       }
-
-      button {
-        background-color: $secondary;
-        color: $dark;
-        opacity: 1;
-        z-index: 9;
-
-        i {
-          transform: rotate(180deg);
-        }
-
-        &:hover {
-          cursor: pointer;
-        }
-        &:active {
-          border: 0;
-        }
-      }
     }
     &:hover {
       .content {
         color: $light !important;
 
-        h2{
+        h2 {
           color: $dark !important;
         }
 
@@ -555,15 +521,15 @@ $time-4: 200s;
         h3 {
           color: $dark !important;
         }
-        button {
-          background-color: $dark;
-          color: $secondary;
+        h6 {
+          color: $dark !important;
         }
       }
     }
   }
 
   .Box3 {
+    transition: height 0.5s ease-in-out;
     bottom: 0;
     left: 0;
 
@@ -576,7 +542,7 @@ $time-4: 200s;
       justify-content: center;
       align-items: center;
 
-      h2{
+      h2 {
         color: $light;
       }
 
@@ -624,34 +590,6 @@ $time-4: 200s;
         }
       }
 
-      button {
-        background-color: transparent;
-        position: absolute;
-        top: 2em;
-        right: 2em;
-        color: $accent;
-        background-color: $dark;
-        width: 35px;
-        height: 35px;
-        border: 0;
-        opacity: 0;
-
-        &:hover {
-          cursor: pointer;
-          background-color: $dark;
-        }
-        &:active {
-          border: 0;
-        }
-
-        @include for-phone() {
-          width: 20px;
-          height: 20px;
-          right: 0;
-          top: 0;
-        }
-      }
-
       &:hover {
         background-color: $accent;
 
@@ -673,18 +611,20 @@ $time-4: 200s;
     }
 
     &:hover {
+      cursor: pointer;
       border-color: $accent;
 
-      h2{
-        color:$dark;
+      h2 {
+        color: $dark;
       }
     }
   }
 
   .Box3-fold {
-    min-height: 90vh;
+    height: 90vh;
     z-index: 2;
     background-color: $dark;
+    transition: height 0.5s ease-in-out;
 
     .content {
       width: 100%;
@@ -699,15 +639,18 @@ $time-4: 200s;
         text-decoration: underline;
       }
 
-      h3{
+      h3 {
         color: $accent !important;
       }
 
       p {
         color: $light !important;
+        text-align: justify;
+        word-break: break-word;
+        letter-spacing: -1px;
       }
 
-      h6{
+      h6 {
         color: $primary !important;
       }
 
@@ -725,42 +668,36 @@ $time-4: 200s;
           gap: 0.5em;
         }
       }
-
-      button {
-        background-color: $accent;
-        color: $dark;
-        opacity: 1;
-
-        i {
-          transform: rotate(180deg);
-        }
-        &:hover {
-          cursor: pointer;
-        }
-        &:active {
-          border: 0;
-        }
-      }
     }
     &:hover {
       .content {
         color: $light !important;
 
-        h2{
+        h2 {
           color: $dark !important;
         }
-        h3{
+        h3 {
           color: $dark !important;
         }
         p {
           color: $dark !important;
         }
+        h6 {
+          color: $dark !important;
+        }
       }
+    }
+  }
 
-      button {
-        background-color: $dark;
-        color: $accent;
-      }
+  .Box3-height-xs {
+    height: 10vh;
+    transition: height 0.5s ease-in-out;
+
+    .content {
+      padding: 0 !important;
+    }
+    &:hover {
+      cursor: not-allowed;
     }
   }
 
