@@ -218,7 +218,6 @@ $time-4: 200s;
       }
     }
     &:hover {
-      cursor: pointer;
       border-color: $primary;
       background-color: $primary;
 
@@ -233,6 +232,8 @@ $time-4: 200s;
     height: 90vh;
     z-index: 2;
     background-color: $light;
+    border: 5px solid $light;
+    box-sizing: border-box;
     transition: height 0.5s ease-in-out;
 
     .animation-wrapper {
@@ -265,6 +266,10 @@ $time-4: 200s;
       p {
         opacity: 1;
         display: block;
+
+        @include for-phone {
+          font-size: 1em !important;
+        }
       }
       img {
         opacity: 1;
@@ -296,8 +301,17 @@ $time-4: 200s;
 
     .content {
       padding: 0 !important;
+
       h1 {
         font-size: 40px !important;
+        @include for-phone {
+          font-size: 28px !important;
+        }
+      }
+      .subtitle {
+        @include for-phone {
+          display: none;
+        }
       }
     }
     &:hover {
@@ -312,6 +326,15 @@ $time-4: 200s;
       padding: 0 !important;
       h1 {
         font-size: 40px !important;
+
+        @include for-phone {
+          word-break: break-all;
+        }
+      }
+      .subtitle {
+        @include for-phone {
+          display: none;
+        }
       }
     }
     &:hover {
@@ -339,19 +362,27 @@ $time-4: 200s;
       .grid-studies {
         display: none;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        justify-content: space-evenly;
+        align-items: center;
         width: 100%;
+        height: 100%;
         margin-top: 1em;
 
         .grid-education {
           display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
           justify-content: center;
-          align-items: space-between;
+          align-items: space-around;
+          gap: 10px;
           width: 50%;
+          height: 100%;
+          @include for-laptop{
+            width: 70%;
+          }
 
           .grid-ed {
-            width: 33%;
+            width: 49%;
             margin: 0 0.5em;
             h3 {
               color: $dark;
@@ -406,11 +437,11 @@ $time-4: 200s;
           }
         }
         .grid-skills {
-          width: 40%;
+          width: 20%;
           height: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
+          justify-content: center;
           align-items: center;
 
           .grid-skill {
@@ -471,6 +502,8 @@ $time-4: 200s;
     z-index: 2;
     background-color: $dark;
     transition: width 0.5s ease-in-out;
+    border: 5px solid $light;
+    box-sizing: border-box;
 
     .content {
       width: 100%;
@@ -489,7 +522,10 @@ $time-4: 200s;
         color: $light !important;
         text-align: justify;
         word-break: break-word;
-        letter-spacing: -1px;
+        
+        @include for-phone {
+          width: 90%;
+        }
       }
       h6 {
         color: $primary !important;
@@ -625,6 +661,7 @@ $time-4: 200s;
     z-index: 2;
     background-color: $dark;
     transition: height 0.5s ease-in-out;
+    border: 5px solid $light;
 
     .content {
       width: 100%;
@@ -647,7 +684,6 @@ $time-4: 200s;
         color: $light !important;
         text-align: justify;
         word-break: break-word;
-        letter-spacing: -1px;
       }
 
       h6 {
