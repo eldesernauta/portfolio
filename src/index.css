@@ -3,10 +3,11 @@
 @import 'tailwindcss/base';
 
 body {
-    @apply m-0 p-0 overflow-hidden bg-neutral-100
+    @apply m-0 p-0 overflow-hidden bg-neutral-100 select-none
 }
 
 p,
+a,
 h2,
 h3,
 h4,
@@ -21,7 +22,7 @@ h3 {
 }
 
 h3 {
-    @apply text-lg
+    @apply text-sm md:text-lg
 }
 
 h6 {

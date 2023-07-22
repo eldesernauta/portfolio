@@ -15,7 +15,7 @@ const SkillBar = ({ skill, percentage }) => {
     }, [percentage]);
 
     return (
-        <div className="relative my-4 w-full h-4 bg-neutral-200 rounded-lg overflow-hidden">
+        <div className="relative mb-4 w-full h-4 bg-neutral-200 rounded-lg overflow-hidden">
             <div
                 ref={barRef}
                 className="h-full bg-primary"

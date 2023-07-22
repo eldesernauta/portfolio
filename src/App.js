@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import Box1 from './components/Box1';
 import Box2 from './components/Box2';
 import Box3 from './components/Box3';
+import Box4 from './components/Box4';
 import './index.css';
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
           id='box1'
           className={`w-full hover:bg-primary text-neutral-100 flex justify-center items-center cursor-pointer transition-all duration-300 ${isOpen1 ? `h-[90vh] border-b-8 border-neutral-100 z-10 bg-neutral-100` : `bg-neutral-900`}  ${isOpen2 ? `w-[10vw] z-0  h-full` : ``} ${isOpen3 ? `h-[10vh] z-0 self-start` : ``} `}
           onClick={handleBoxState1}>
-          <Box1 state={isOpen1} />
+          <Box1 state={isOpen1} stateBox2={isOpen2} stateBox3={isOpen3} />
         </div>
         <div
           id='box2'
@@ -52,12 +53,8 @@ function App() {
         </div>
         <div
           id='box4' className={`w-full bg-neutral-100  text-neutral-100  flex justify-center items-center cursor-pointer ${isOpen1 ? `` : ``}`}>
-          <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-2">
-            <div className='w-full bg-neutral-900'>1</div>
-            <div className='w-full bg-neutral-900'>2</div>
-            <div className='w-full bg-neutral-900'>3</div>
-            <div className='w-full bg-neutral-900'>4</div>
-          </div>
+
+          <Box4 />
         </div>
       </div>
     </div>

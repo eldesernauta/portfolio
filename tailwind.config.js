@@ -14,7 +14,10 @@ module.exports = {
         primary: '#B980FF',
         secondary: '#FFF844',
         accent: '#2CFF8F',
-      }
+      },
+      screens: {
+        'xxs': '360px', // min-width
+      },
     },
   },
   plugins: [],
