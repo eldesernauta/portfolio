@@ -21,7 +21,7 @@ const SkillBar = ({ skill, percentage }) => {
                 className="h-full bg-primary"
                 style={{ width: '0%' }}
             ></div>
-            <div className="absolute font-Roboto text-xs inset-0 flex items-center justify-center text-neutral-900 font-semibold">
+            <div className="absolute font-Roboto text-xs inset-0 flex items-center justify-center text-secondary font-semibold">
                 {skill}
             </div>
         </div>

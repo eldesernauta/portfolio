@@ -1,6 +1,7 @@
 const Box3 = (props) => {
     return (
         <div className={`group relative h-full flex flex-col ${props.state ? `justify-start items-center p-3 overflow-y-hidden lg:overflow-y-auto 2xl:overflow-y-hidden` : `justify-center items-center`}`}>
+
             <h2 className="text-lg md:text-2xl font-semibold">Experience</h2>
             {props.state &&
                 <div className="grid grid-cols-1 grid-rows-3 gap-3 w-full xl:w-5/6 2xl:w:4/6 mt-3 md:mt-6">
@@ -11,7 +12,7 @@ const Box3 = (props) => {
                             <br />
                             (Spain client) - (Medellín, Antioquia - Colombia)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-secondary group-hover:text-neutral-900`}>
                             DDB Colombia
                             <br />
                             Jun. 2023 - Present
@@ -24,7 +25,7 @@ const Box3 = (props) => {
                             <br />
                             (Bilingual) - (Austin, Texas - USA)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-secondary group-hover:text-neutral-900`}>
                             Howdy Inc.
                             <br />
                             Mar. 2022 - Jan. 2023
@@ -37,7 +38,7 @@ const Box3 = (props) => {
                             <br />
                             (Bilingual) - (Medellin, Antioquia)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-secondary group-hover:text-neutral-900`}>
                             Solvo Global
                             <br />
                             Jul. 2020 - Mar. 2022
@@ -50,15 +51,15 @@ const Box3 = (props) => {
                             <br />
                             (Bello, Antioquia)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-secondary group-hover:text-neutral-900`}>
                             Script Digital
                             <br />
                             Feb. 2019 - Jun. 2020
                         </h6>
                     </div>
+
                 </div>
             }
-
         </div>
     );
 }

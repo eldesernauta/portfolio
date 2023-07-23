@@ -11,9 +11,9 @@ module.exports = {
         Roboto: ['Roboto Mono', 'sans-serif'],
       },
       colors: {
-        primary: '#B980FF',
-        secondary: '#FFF844',
-        accent: '#2CFF8F',
+        primary: '#5C5B80',
+        secondary: '#D1D69F',
+        accent: '#B794B4',
       },
       screens: {
         'xxs': '360px', // min-width

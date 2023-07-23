@@ -2,18 +2,32 @@
 
 @import 'tailwindcss/base';
 
+* {
+    cursor: none !important;
+}
+
 body {
     @apply m-0 p-0 overflow-hidden bg-neutral-100 select-none
 }
 
+::selection {
+    background-color: transparent;
+}
+
 p,
 a,
+li,
 h2,
 h3,
 h4,
 h5,
 h6 {
     @apply font-Roboto
+}
+
+.h1 {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
 }
 
 h2,
@@ -33,7 +47,46 @@ h6 {
 
 @import 'tailwindcss/utilities';
 
+/* width */
+::-webkit-scrollbar {
+    @apply w-2
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-primary
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #171717;
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+
 @font-face {
     font-family: Sextape;
     src: url("./fonts/Sextape/Sextape.ttf") format("truetype");
+}
+
+/* index.css */
+
+.cursor {
+    pointer-events: none;
+}
+
+.cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: color-burn;
+    z-index: 1000;
+}
+
+.cursor__ball circle {
+    @apply fill-neutral-900
 }

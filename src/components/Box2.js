@@ -3,7 +3,7 @@ import SkillBar from './SkillBar';
 const Box2 = (props) => {
     return (
         <div className={`group relative h-full flex flex-col ${props.state ? `justify-start items-center p-3 overflow-y-auto ` : `justify-center items-center`}`}>
-            <h2 className="text-center text-lg md:text-2xl font-semibold mb-0 2xl:mb-8">Education / Skills</h2>
+            <h2 className={`text-center text-lg md:text-2xl font-semibold mb-0 2xl:mb-8 ${props.state && `underline`}`}>Education / Skills</h2>
             {props.state &&
                 <div className="grid gap-3 lg:gap-8 grid-cols-1 lg:grid-cols-3 grid-rows-[auto_auto_auto_auto_auto_auto] lg:grid-rows-[auto_auto] w-full xl:w-5/6 2xl:w:4/6 mt-3">
                     <div>
@@ -13,7 +13,7 @@ const Box2 = (props) => {
                             <br />
                             (Armenia, Quindío)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-accent group-hover:text-neutral-900`}>
                             E.A.M
                             <br />
                             2012 - 2017
@@ -27,7 +27,7 @@ const Box2 = (props) => {
                             <br />
                             (Medellín, Antioquia)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-accent group-hover:text-neutral-900`}>
                             University of Antioquia
                             <br />
                             Mar. 2021 - Dic. 2021
@@ -41,7 +41,7 @@ const Box2 = (props) => {
                             <br />
                             (Catalonia, Spain)
                         </p>
-                        <h6 className={`text-primary group-hover:text-neutral-900`}>
+                        <h6 className={`text-accent group-hover:text-neutral-900`}>
                             Universitat Politècnica de Catalunya
                             <br />
                             May. 2022 - May. 2023
