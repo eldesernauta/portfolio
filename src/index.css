@@ -4,6 +4,7 @@
 
 * {
     cursor: none !important;
+    box-sizing: border-box;
 }
 
 body {
@@ -57,15 +58,22 @@ h6 {
     @apply bg-primary
 }
 
+
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #171717;
+    @apply bg-secondary;
     border-radius: 0px;
+}
+
+/* Handle */
+.box3-container::-webkit-scrollbar-thumb {
+    @apply bg-accent
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: red;
+    @apply bg-primary
 }
 
 @font-face {
@@ -83,10 +91,10 @@ h6 {
     position: fixed;
     top: 0;
     left: 0;
-    mix-blend-mode: color-burn;
+    mix-blend-mode: color-dodge;
     z-index: 1000;
 }
 
 .cursor__ball circle {
-    @apply fill-neutral-900
+    @apply fill-primary
 }

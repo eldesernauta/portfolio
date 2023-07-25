@@ -1,24 +1,12 @@
-const CameraIcon = () => {
+const CameraIcon = (props) => {
     return (
-        <svg width="50px" height="50px" viewBox="0 -0.5 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-door">
+        <svg className="w-8 md:w-16 h-8 md:h-16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 
-            <defs>
+            <g fill="none" fill-rule="evenodd">
 
-            </defs>
+                <path d="m0 0h32v32h-32z" />
 
-            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-                <g transform="translate(4.000000, 0.000000)" fill="#171717">
-
-                    <path d="M0.083,0.041 L7.042,2.708 L7.042,14.792 L0.333,13.083 L0.125,13.917 L7.928,15.917 L7.928,13.875 L9.896,13.874 L9.896,0.041 L0.083,0.041 Z" class="si-glyph-fill">
-
-                    </path>
-
-                    <rect x="5" y="8" width="0.875" height="0.875" class="si-glyph-fill">
-
-                    </rect>
-
-                </g>
+                <path d="m16 0c6.0751322 0 11 4.92486775 11 11v19h4c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1h-30c-.55228475 0-1-.4477153-1-1s.44771525-1 1-1h4v-19c0-6.07513225 4.92486775-11 11-11zm5 13c-.5522847 0-1 .4477153-1 1v6c0 .5522847.4477153 1 1 1s1-.4477153 1-1v-6c0-.5522847-.4477153-1-1-1z" fill={props.color} />
 
             </g>
 

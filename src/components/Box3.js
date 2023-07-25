@@ -1,8 +1,8 @@
 const Box3 = (props) => {
     return (
-        <div className={`group relative h-full flex flex-col ${props.state ? `justify-start items-center p-3 overflow-y-hidden lg:overflow-y-auto 2xl:overflow-y-hidden` : `justify-center items-center`}`}>
+        <div className={`box3-container group relative h-full flex flex-col ${props.state ? `justify-start items-center p-3 overflow-y-hidden lg:overflow-y-auto 2xl:overflow-y-hidden` : `justify-center items-center`}`}>
 
-            <h2 className="text-lg md:text-2xl font-semibold">Experience</h2>
+            <h2 className={`text-center text-lg md:text-2xl font-semibold mb-0 2xl:mb-8 ${props.state && `underline`}`}>Experience</h2>
             {props.state &&
                 <div className="grid grid-cols-1 grid-rows-3 gap-3 w-full xl:w-5/6 2xl:w:4/6 mt-3 md:mt-6">
                     <div>
