@@ -1,4 +1,4 @@
-const CameraIcon = (props) => {
+const DoorIcon = (props) => {
     return (
         <svg className="w-8 md:w-16 h-8 md:h-16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 
@@ -14,4 +14,4 @@ const CameraIcon = (props) => {
     );
 }
 
-export default CameraIcon;
+export default DoorIcon;

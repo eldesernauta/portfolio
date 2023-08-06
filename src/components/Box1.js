@@ -8,7 +8,8 @@ const Box1 = (props) => {
         const particles = document.querySelector(".animation-wrapper")
         if (props.state) {
             particles.style.height = "90vh"
-        } else {
+        }
+        else {
             particles.style.height = "50vh"
         }
     }, [props.state])

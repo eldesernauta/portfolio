@@ -23,7 +23,7 @@ const Box2 = (props) => {
                         <h3 className="text-secondary group-hover:text-neutral-900">MISIONTIC 2022</h3>
                         <p className={`text-sm font-regular my-2`}>
                             Member at the 2nd Route of the fullstack web development
-                            training imparted by the colombian ICT ministry
+                            training by the colombian ICT ministry
                             <br />
                             (Medellín, Antioquia)
                         </p>
@@ -36,8 +36,7 @@ const Box2 = (props) => {
                     <div>
                         <h3 className="text-secondary group-hover:text-neutral-900">FULL STACK WEB DEVELOPMENT MASTER</h3>
                         <p className={`text-sm font-regular my-2`}>
-                            Active member in Master’s degree focused on Full Stack web
-                            development.
+                            Master on Full Stack web development.
                             <br />
                             (Catalonia, Spain)
                         </p>

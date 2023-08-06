@@ -6,7 +6,7 @@ import {
     faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFilePdf } from "@fortawesome/free-solid-svg-icons";
-import CameraIcon from "./CameraIcon"
+import DoorIcon from "./doorIcon"
 
 const pdfFile = require("../assets/CV_2023.pdf")
 
@@ -117,7 +117,7 @@ const Box4 = (props) => {
                 {isOpen3 &&
                     <>
                         <a href="https://ph.eldesernauta.com" target="_blank" rel="noreferrer" className="select-all hover:text-primary">
-                            <CameraIcon color={`#171717`} />
+                            <DoorIcon color={`#171717`} />
                         </a>
                     </>
                 }
