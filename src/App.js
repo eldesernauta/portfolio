@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { gsap } from 'gsap';
 import Box1 from './components/Box1';
 import Box2 from './components/Box2';
 import Box3 from './components/Box3';
@@ -7,7 +6,7 @@ import Box4 from './components/Box4';
 import './index.css';
 import './particles.scss'
 import CustomCursor from './components/Cursor';
-  const hoverables = document.querySelectorAll(".hoverable")
+const hoverables = document.querySelectorAll(".hoverable")
 
 function App() {
   const [isOpen1, setIsOpen1] = useState(false)
