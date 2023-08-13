@@ -42,7 +42,7 @@ function App() {
         </div>
         <div
           id='box2'
-          className={`w-full bg-neutral-900 hover:bg-secondary text-neutral-100 hover:text-neutral-900 flex justify-center items-center transition-all duration-300 ${isOpen2 ? `min-w-[90vw] z-10 float-left` : ``} ${isOpen1 ? `` : ``} `}
+          className={`w-full bg-neutral-900 hover:bg-secondary text-neutral-100 hover:text-neutral-900 flex justify-center items-center transition-all duration-300 ${isOpen2 ? `min-w-[80vw] lg:min-w-[90vw] z-10 float-left` : ``} ${isOpen1 ? `` : ``} `}
           onClick={handleBoxState2}
         >
           <Box2 state={isOpen2} />
