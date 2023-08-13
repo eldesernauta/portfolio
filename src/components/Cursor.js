@@ -47,7 +47,7 @@ const CustomCursor = (props) => {
                 hoverable.removeEventListener('mouseleave', onMouseHoverOut);
             });
         };
-    }, []);
+    }, [props.hoverable]);
 
     return (
         <div className="cursor absolute">

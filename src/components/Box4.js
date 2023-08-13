@@ -10,7 +10,6 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 import DoorIcon from "./doorIcon"
-import { data } from "autoprefixer";
 
 const spotGif = require("../img/spot.gif")
 const helpgo1 = require("../img/helpgo_login.png")
@@ -148,7 +147,7 @@ const Box4 = (props) => {
                             </ul>
                             <ul className="flex flex-col gap-0 lg:gap-3 max-sm:text-xs">
                                 {data2.map((item, index) => (
-                                    <a href={item.URL} target="_blank"><li key={index} className="select-all">{item.Texto}</li></a>
+                                    <a href={item.URL} target="_blank" rel="noreferrer"><li key={index} className="select-all">{item.Texto}</li></a>
                                 ))}
                             </ul>
                         </div>
