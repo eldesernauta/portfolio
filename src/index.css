@@ -1,73 +1,158 @@
-html,
-body,
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import 'tailwindcss/base';
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    cursor: none !important;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+    @apply m-0 p-0 overflow-hidden bg-neutral-100 select-none
 }
-.tooltip{
-  max-width: 200px;
-  text-align: center;
+
+::selection {
+    background-color: transparent;
 }
+
+p,
+a,
+li,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-Roboto
+}
+
+.h1 {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+h2,
+h3 {
+    @apply font-semibold
+}
+
+h3 {
+    @apply text-sm md:text-lg
+}
+
+h6 {
+    @apply text-xs font-bold
+}
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+/* width */
+::-webkit-scrollbar {
+    @apply w-2
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    @apply bg-primary
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+    border-radius: 0px;
+}
+
+/* Handle */
+.box3-container::-webkit-scrollbar-thumb {
+    @apply bg-accent
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary
+}
+
+@font-face {
+    font-family: Sextape;
+    src: url("./fonts/Sextape/Sextape.ttf") format("truetype");
+}
+
+/* index.css */
+
+.cursor {
+    pointer-events: none;
+}
+
+.cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: color-dodge;
+    z-index: 1000;
+}
+
+.cursor__ball circle {
+    @apply fill-primary
+}
+
+
+/* popup */
+
+
 .popup-content,
 .modal-spot-content {
-  background-color: #111 !important;
-  padding: 2em !important;
-  position: relative;
-  border: 5px solid #dbdbdb !important;
-  color: #dbdbdb;
+    background-color: #171717 !important;
+    padding: 2em !important;
+    position: relative;
+    border: 7px solid #f5f5f5 !important;
+    color: #f5f5f5;
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
+
 .popup-content h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
-.popup-content a {
-  color: #dbdbdb;
-}
-.popup-content a:hover {
-  color: #f2fd00;
-}
+
 .popup-content img {
-  max-width: 100%;
-  mix-blend-mode: lighten;
+    max-width: 100%;
+    mix-blend-mode: lighten;
 }
+
 .popup-overlay {
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
+
 .close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  color: #dbdbdb;
-  margin: 0;
-  border: 0;
-  width: 30px;
-  height: 30px;
-  border-left: 5px solid #dbdbdb;
-  border-bottom: 5px solid #dbdbdb;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #171717;
+    color: #f5f5f5;
+    margin: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-left: 5px solid #f5f5f5;
+    border-bottom: 5px solid #f5f5f5;
 }
+
 .close:hover {
-  background-color: #dbdbdb;
-  color: #111;
-  cursor: pointer;
+    background-color: #f5f5f5;
+    color: #171717;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
-  .popup-content,
-  .modal-spot-content {
-    min-width: 95%;
-    padding: 1em !important;
-  }
+
+    .popup-content,
+    .modal-spot-content {
+        min-width: 95%;
+        padding: 1em !important;
+    }
 }
