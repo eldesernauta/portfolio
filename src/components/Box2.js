@@ -21,9 +21,8 @@ const Box2 = (props) => {
                     </div>
                     <div>
                         <h3 className="text-secondary group-hover:text-neutral-900">MISIONTIC 2022</h3>
-                        <p className={`text-sm font-regular my-2`}>
-                            Member at the 2nd Route of the fullstack web development
-                            training by the colombian ICT ministry
+                        <p className={`text-sm font-regular my-2 w-5/6`}>
+                            Member at the 2nd Route of the fullstack web development training by the colombian ICT ministry
                             <br />
                             (Medellín, Antioquia)
                         </p>
@@ -46,21 +45,21 @@ const Box2 = (props) => {
                             May. 2022 - May. 2023
                         </h6>
                     </div>
-                    <div className="w-auto">
+                    <div className="w-full">
                         <SkillBar skill="HTML" percentage={95} />
                         <SkillBar skill="CSS" percentage={85} />
                         <SkillBar skill="JavaScript" percentage={75} />
                         {/* Agrega más barras de progreso de habilidades aquí */}
                     </div>
 
-                    <div className="w-auto">
+                    <div className="w-full">
                         <SkillBar skill="React" percentage={80} />
                         <SkillBar skill="Node" percentage={70} />
                         <SkillBar skill="Tailwind" percentage={90} />
                         {/* Agrega más barras de progreso de habilidades aquí */}
                     </div>
 
-                    <div className="w-auto">
+                    <div className="w-full">
                         <SkillBar skill="AWS" percentage={70} />
                         <SkillBar skill="Git" percentage={85} />
                         <SkillBar skill="English" percentage={80} />
